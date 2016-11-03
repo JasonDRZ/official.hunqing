@@ -21,7 +21,7 @@
   img.logo_mo{
     display: inline-block;
     height: 30px;
-    margin-top: 15px;
+    margin-top: 13px;
   }
   img.loge_right{
     display: none;
@@ -51,6 +51,9 @@
       }
       &.nav_logo{
         display: inline-block;
+        img{
+          height: 56px;
+        }
       }
       a {
         display: inline-block;
@@ -82,9 +85,9 @@
     position: fixed;
     display: block;
     top: 8px;
-    right: 11px;
-    height: 45px;
-    width: 45px;
+    right: 12px;
+    height: 40px;
+    width: 40px;
     cursor: pointer;
     //background-color: #EEEEEE;
     i {
@@ -92,17 +95,17 @@
       left: 9px;
       display: block;
       width: 28px;
-      border-top: 2px solid lighten($main_black, 10%);
+      border-top: 2px solid lighten($main_black, 40%);
       @include transition();
     }
     i:nth-child(1) {
-      top: 11px;
+      top: 10px;
     }
     i:nth-child(2) {
-      top: 21px;
+      top: 20px;
     }
     i:nth-child(3) {
-      top: 31px;
+      top: 30px;
     }
     &.active {
 
