@@ -1,0 +1,729 @@
+<!doctype html>
+<html page="index" lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>official hunqing</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <script src="scripts/loading.js" type="text/javascript"></script>
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link href='/bower_components/swiper/dist/css/swiper.min.css' rel="stylesheet"/>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="loading_section">
+      <div class="line_left"></div>
+      <div class="center_block">
+        <img src="images/img_home/logo.jpg">
+      <span>Loading...<em>0%</em></span></div>
+      <div class="line_right"></div>
+    </div>
+    <header class="header_container container-fluid">
+      <a href="#index">
+        <img src="images/img_home/logo_wedding.png" class="logo" alt="">
+        <img src="images/img_home/logo_mo.png" class="logo_mo" alt="">
+      </a>
+      <input type="checkbox" id="nav_checker" class="hidden nav_check">
+      <label for="nav_checker" class="nav_button"><i></i><i></i><i></i></label>
+      <nav class="navigation font_reDraw">
+        <li class="nav_logo"><img src="images/img_home/logo_wedding.png" alt=""></li>
+        <li class="nav_home"><a class="navigation_link" href="#index">首页<small>Home</small></a></li>
+        <li><a class="navigation_link" href="#wedding">婚礼<small>Wedding</small></a></li>
+        <li><a class="navigation_link" href="#propose">求婚<small>Propose</small></a></li>
+        <li><a class="navigation_link" href="#activity">动态<small>Activity</small></a></li>
+        <li><a class="navigation_link" href="#aboutus">关于我们<small>About us</small></a></li>
+        <li><a class="navigation_link" href="#consulting">咨询预约<small>Consulting</small></a></li>
+        <div class="head_footer">
+          <ul class="social_media">
+            <li class="wechat"><a></a></li>
+            <li class="weibo"><a></a></li>
+            <li class="qq"><a href=""></a></li>
+            <div class="wechat_code_box">
+              <img src="images/tmp/qcode.jpg" alt="">
+            </div>
+          </ul>
+          <nav class="foot_nav">
+            <li class="active"><a class="navigation_link font_reDraw" href="#joinus">加入我们</a></li>
+            <li><a class="navigation_link font_reDraw" href="#partners">合作伙伴</a></li>
+            <li><span>客服热线<r>:</r> <strong>400-500-521</strong></span></li>
+          </nav>
+        </div>
+      </nav>
+      <img class="loge_right" src="images/img_home/logo_mo.png" alt="">
+    </header>
+    <section class="content_body_container container-fluid">
+      <div class="pageScroll_container" id="pageScrollContainer">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" view="index">
+            <div class="swiper-container" id="banner_container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url('images/img_home/img_banner.png')"></div>
+                <div class="swiper-slide" style="background-image: url('images/img_wedding/img_wedding_one.png')"></div>
+                <div class="swiper-slide" style="background-image: url('images/img_home/img_banner.png')"></div>
+              </div>
+              <div class="swiper-pagination banner-pagination"></div>
+              <div class="custom_button_next bannerswiper-button-next"></div>
+              <div class="custom_button_prev bannerswiper-button-prev"></div>
+            </div>
+          </div>
+          <div class="swiper-slide" view="wedding">
+            <div class="picture_video_container">
+              <div class="tabSwitch_box PVSwitch">
+                <div class="switch_header font_reDraw">
+                  <li class="active" data-target="#pv_picture" data-link="wed_picture.html?picture">婚礼照片</li>
+                  <li data-target="#pv_video" data-link="wed_video.html?video">婚礼视频</li>
+                  <a class="btn_more" type="btn_more"></a>
+                </div>
+                <div class="switch_body">
+                  <div class="active" id="pv_picture">
+                    <div class="swiper-container pv_swiper" id="pv_picture_swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <a href="wed_picture_details.html" type="pv_picture">
+                            <img src="images/img_wedding/img_wedding_one.png" alt="">
+                          </a>
+                          <div class="pv_content">
+                            <span class="pv_title">【载·归】宁得一人心，白首莫相离</span>
+                            <p class="pv_sub">撒贝宁&李白</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="wed_picture_details.html" type="pv_picture">
+                            <img src="images/img_wedding/img_wedding_th.png" alt="">
+                          </a>
+                          <div class="pv_content">
+                            <span class="pv_title">照亮心里的璐</span>
+                            <p class="pv_sub">撒贝宁&李白</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="wed_picture_details.html" type="pv_picture">
+                            <img src="images/img_wedding/img_wedding_five.png" alt="">
+                          </a>
+                          <div class="pv_content">
+                            <span class="pv_title">【载·归】宁得一人心，白首莫相离</span>
+                            <p class="pv_sub">撒贝宁&李白</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="wed_picture_details.html" type="pv_picture">
+                            <img src="images/img_wedding/img_wedding_t.png" alt="">
+                          </a>
+                          <div class="pv_content">
+                            <span class="pv_title">【载·归】宁得一人心，白首莫相离</span>
+                            <p class="pv_sub">撒贝宁&李白</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="custom_button_next pvswiper-button-next"></div>
+                      <div class="custom_button_prev pvswiper-button-prev"></div>
+                    </div>
+                  </div>
+                  <div id="pv_video">
+                    <div class="swiper-container pv_swiper" id="pv_video_swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <a href="http://player.youku.com/embed/XOTUzMDgyNzg4" type="pv_video">
+                            <img src="images/img_wedding/img_wedding_th.png" alt="">
+                            <span class="movie_mask"><i></i></span>
+                          </a>
+                          <div class="pv_content">
+                            <span class="pv_title">照亮心里的璐</span>
+                            <p class="pv_sub">撒贝宁&李白</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="http://player.youku.com/embed/XOTUzMDgyNzg4" type="pv_video">
+                            <img src="images/img_wedding/img_wedding_one.png" alt="">
+                            <span class="movie_mask"><i></i></span>
+                          </a>
+                          <div class="pv_content">
+                            <span class="pv_title">【载·归】宁得一人心，白首莫相离</span>
+                            <p class="pv_sub">撒贝宁&李白</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="http://player.youku.com/embed/XOTUzMDgyNzg4" type="pv_video">
+                            <img src="images/img_wedding/img_wedding_t.png" alt="">
+                            <span class="movie_mask"><i></i></span>
+                          </a>
+                          <div class="pv_content">
+                            <span class="pv_title">【载·归】宁得一人心，白首莫相离</span>
+                            <p class="pv_sub">撒贝宁&李白</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="http://player.youku.com/embed/XOTUzMDgyNzg4" type="pv_video">
+                            <img src="images/img_wedding/img_wedding_five.png" alt="">
+                            <span class="movie_mask"><i></i></span>
+                          </a>
+                          <div class="pv_content">
+                            <span class="pv_title">【载·归】宁得一人心，白首莫相离</span>
+                            <p class="pv_sub">撒贝宁&李白</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="custom_button_next pvswiper-button-next"></div>
+                      <div class="custom_button_prev pvswiper-button-prev"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" view="propose">
+            <div class="picture_video_container">
+              <div class="tabSwitch_box PVSwitch">
+                <div class="switch_header font_reDraw">
+                  <li class="active" data-target="#po_picture" data-link="wed_picture.html?picture">求婚照片</li>
+                  <li data-target="#po_video" data-link="wed_video.html?video">求婚视频</li>
+                  <a class="btn_more" type="btn_more"></a>
+                </div>
+                <div class="switch_body">
+                  <div class="active" id="po_picture">
+                    <div class="swiper-container pv_swiper" id="po_picture_swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <a href="wed_picture_details.html" type="pv_picture">
+                            <img src="images/img_wedding/img_wedding_one.png" alt="">
+                          </a>
+                          <div class="pv_content">
+                            <span class="pv_title">【载·归】宁得一人心，白首莫相离</span>
+                            <p class="pv_sub">撒贝宁&李白</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="wed_picture_details.html" type="pv_picture">
+                            <img src="images/img_wedding/img_wedding_th.png" alt="">
+                          </a>
+                          <div class="pv_content">
+                            <span class="pv_title">照亮心里的璐</span>
+                            <p class="pv_sub">撒贝宁&李白</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="wed_picture_details.html" type="pv_picture">
+                            <img src="images/img_wedding/img_wedding_five.png" alt="">
+                          </a>
+                          <div class="pv_content">
+                            <span class="pv_title">【载·归】宁得一人心，白首莫相离</span>
+                            <p class="pv_sub">撒贝宁&李白</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="wed_picture_details.html" type="pv_picture">
+                            <img src="images/img_wedding/img_wedding_t.png" alt="">
+                          </a>
+                          <div class="pv_content">
+                            <span class="pv_title">【载·归】宁得一人心，白首莫相离</span>
+                            <p class="pv_sub">撒贝宁&李白</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="custom_button_next pvswiper-button-next"></div>
+                      <div class="custom_button_prev pvswiper-button-prev"></div>
+                    </div>
+                  </div>
+                  <div id="po_video">
+                    <div class="swiper-container pv_swiper" id="po_video_swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <a href="http://player.youku.com/embed/XOTUzMDgyNzg4" type="pv_video">
+                            <img src="images/img_wedding/img_wedding_th.png" alt="">
+                            <span class="movie_mask"><i></i></span>
+                          </a>
+                          <div class="pv_content">
+                            <span class="pv_title">照亮心里的璐</span>
+                            <p class="pv_sub">撒贝宁&李白</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="http://player.youku.com/embed/XOTUzMDgyNzg4" type="pv_video">
+                            <img src="images/img_wedding/img_wedding_one.png" alt="">
+                            <span class="movie_mask"><i></i></span>
+                          </a>
+                          <div class="pv_content">
+                            <span class="pv_title">【载·归】宁得一人心，白首莫相离</span>
+                            <p class="pv_sub">撒贝宁&李白</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="http://player.youku.com/embed/XOTUzMDgyNzg4" type="pv_video">
+                            <img src="images/img_wedding/img_wedding_t.png" alt="">
+                            <span class="movie_mask"><i></i></span>
+                          </a>
+                          <div class="pv_content">
+                            <span class="pv_title">【载·归】宁得一人心，白首莫相离</span>
+                            <p class="pv_sub">撒贝宁&李白</p>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="http://player.youku.com/embed/XOTUzMDgyNzg4" type="pv_video">
+                            <img src="images/img_wedding/img_wedding_five.png" alt="">
+                            <span class="movie_mask"><i></i></span>
+                          </a>
+                          <div class="pv_content">
+                            <span class="pv_title">【载·归】宁得一人心，白首莫相离</span>
+                            <p class="pv_sub">撒贝宁&李白</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="custom_button_next pvswiper-button-next"></div>
+                      <div class="custom_button_prev pvswiper-button-prev"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" view="activity">
+            <div class="news_container">
+              <div class="tabSwitch_box vertical NewsSwitch">
+                <div class="switch_header font_reDraw">
+                  <li class="active" data-target="#news_news" data-link="wed_news.html?latest">最新资讯</li>
+                  <li data-target="#news_crowd" data-link="wed_news.html?activity">活动众筹</li>
+                  <a class="btn_more" type="btn_more"></a>
+                </div>
+                <div class="switch_body">
+                  <div class="active" id="news_news">
+                    <div class="swiper-container news_swiper" id="news_news_swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="news_bg" style="background-image: url('images/img_news/img_one.png')"></div>
+                          <a href="wed_news_details.html" type="news_content" class="news_content_box">
+                            <i class="border_line"></i>
+                            <div class="news_content">
+                              <em>05-10</em>
+                              <span>汇爱明星婚礼 / 何建泽陶昕然婚礼全程回顾</span>
+                              <p>他说，“虽然我不是一个善于表达内心情感的人，但我是一个用实际行动去做的人，不管是今天、昨天、还是将...</p>
+                              <i class="arrow"></i>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide" center_scale="yes">
+                          <div class="news_bg" style="background-image: url('images/img_news/img_five.png')"></div>
+                          <a href="wed_news_details.html" type="news_content" class="news_content_box">
+                            <i class="border_line"></i>
+                            <div class="news_content">
+                              <em>05-10</em>
+                              <span>汇爱明星婚礼 / 何建泽陶昕然婚礼全程回顾</span>
+                              <p>他说，“虽然我不是一个善于表达内心情感的人，但我是一个用实际行动去做的人，不管是今天、昨天、还是将...</p>
+                              <i class="arrow"></i>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="news_bg" style="background-image: url('images/img_news/img_three.png')"></div>
+                          <a href="wed_news_details.html" type="news_content" class="news_content_box">
+                            <i class="border_line"></i>
+                            <div class="news_content">
+                              <em>05-10</em>
+                              <span>汇爱明星婚礼 / 何建泽陶昕然婚礼全程回顾</span>
+                              <p>他说，“虽然我不是一个善于表达内心情感的人，但我是一个用实际行动去做的人，不管是今天、昨天、还是将...</p>
+                              <i class="arrow"></i>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="news_bg" style="background-image: url('images/img_news/img_four.png')"></div>
+                          <a href="wed_news_details.html" type="news_content" class="news_content_box">
+                            <i class="border_line"></i>
+                            <div class="news_content">
+                              <em>05-10</em>
+                              <span>汇爱明星婚礼 / 何建泽陶昕然婚礼全程回顾</span>
+                              <p>他说，“虽然我不是一个善于表达内心情感的人，但我是一个用实际行动去做的人，不管是今天、昨天、还是将...</p>
+                              <i class="arrow"></i>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="custom_button_next newsSwiper-button-next"></div>
+                      <div class="custom_button_prev newsSwiper-button-prev"></div>
+                    </div>
+                  </div>
+                  <div id="news_crowd">
+                    <div class="swiper-container news_swiper" id="news_crowd_swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="news_bg" style="background-image: url('images/img_news/img_three.png')"></div>
+                          <a href="wed_news_details.html" type="news_content" class="news_content_box">
+                            <i class="border_line"></i>
+                            <div class="news_content">
+                              <em>05-10</em>
+                              <span>汇爱明星婚礼 / 何建泽陶昕然婚礼全程回顾</span>
+                              <p>他说，“虽然我不是一个善于表达内心情感的人，但我是一个用实际行动去做的人，不管是今天、昨天、还是将...</p>
+                              <i class="arrow"></i>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide" center_scale="yes">
+                          <div class="news_bg" style="background-image: url('images/img_news/img_five.png')"></div>
+                          <a href="wed_news_details.html" type="news_content" class="news_content_box">
+                            <i class="border_line"></i>
+                            <div class="news_content">
+                              <em>05-10</em>
+                              <span>汇爱明星婚礼 / 何建泽陶昕然婚礼全程回顾</span>
+                              <p>他说，“虽然我不是一个善于表达内心情感的人，但我是一个用实际行动去做的人，不管是今天、昨天、还是将...</p>
+                              <i class="arrow"></i>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="news_bg" style="background-image: url('images/img_news/img_one.png')"></div>
+                          <a href="wed_news_details.html" type="news_content" class="news_content_box">
+                            <i class="border_line"></i>
+                            <div class="news_content">
+                              <em>05-10</em>
+                              <span>汇爱明星婚礼 / 何建泽陶昕然婚礼全程回顾</span>
+                              <p>他说，“虽然我不是一个善于表达内心情感的人，但我是一个用实际行动去做的人，不管是今天、昨天、还是将...</p>
+                              <i class="arrow"></i>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="news_bg" style="background-image: url('images/img_news/img_four.png')"></div>
+                          <a href="wed_news_details.html" type="news_content" class="news_content_box">
+                            <i class="border_line"></i>
+                            <div class="news_content">
+                              <em>05-10</em>
+                              <span>汇爱明星婚礼 / 何建泽陶昕然婚礼全程回顾</span>
+                              <p>他说，“虽然我不是一个善于表达内心情感的人，但我是一个用实际行动去做的人，不管是今天、昨天、还是将...</p>
+                              <i class="arrow"></i>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="custom_button_next newsSwiper-button-next"></div>
+                      <div class="custom_button_prev newsSwiper-button-prev"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" view="aboutus">
+            <div class="about_container">
+              <div class="tabSwitch_box vertical AboutSwitch">
+                <div class="switch_header font_reDraw">
+                  <li class="active" data-target="#about_team">我们的团队</li>
+                  <li data-target="#about_idea">品牌理念</li>
+                  <li data-target="#about_story">大事记</li>
+                </div>
+                <div class="switch_body">
+                  <div class="active" id="about_team">
+                    <div class="about_team_box">
+                      <div class="team_member_show whether-no-swipe-box" id="team_member_show_box">
+                        <div class="whether-no-swipe-item">
+                          <figure><img src="{{avatar}}" alt="{{name}}"></figure>
+                          <div class="team_member_content">
+                            <div>
+                              <h3>{{name}}</h3>
+                              <h5>{{duty}}</h5>
+                              <article>
+                                {{desc}}
+                              </article>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="team_members_index">
+                        <div class="team_member_container" id="team_members_index_swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="team_info" data-name="大宝" data-duty="宴会设计师"
+                                   data-avatar="images/img_home/1466587272362.jpg"
+                                   data-desc="摩羯座的她热爱生活,喜欢旅行、喜欢摄影！毕业于设计专业的她对于婚礼装饰有着自己独特的想法。力求婚礼细节布置的完美可谓是她的宗旨！重视每场婚礼美感与情感的融合，因为她始终觉得实现每个女孩的婚礼梦是她作为一位婚礼设计的意义所在!">
+                                <h3>大宝</h3>
+                                <h5>宴会设计师</h5>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="team_info" data-name="小李" data-duty="化妆师"
+                                   data-avatar="images/img_home/1466587272362.jpg"
+                                   data-desc="摩羯座的她热爱生活,喜欢旅行、喜欢摄影！毕业于设计专业的她对于婚礼装饰有着自己独特的想法。力求婚礼细节布置的完美可谓是她的宗旨！重视每场婚礼美感与情感的融合，因为她始终觉得实现每个女孩的婚礼梦是她作为一位婚礼设计的意义所在!">
+                                <h3>小李</h3>
+                                <h5>化妆师</h5>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="team_info" data-name="小东" data-duty="艺术设计师"
+                                   data-avatar="images/img_home/1466587272362.jpg"
+                                   data-desc="摩羯座的她热爱生活,喜欢旅行、喜欢摄影！毕业于设计专业的她对于婚礼装饰有着自己独特的想法。力求婚礼细节布置的完美可谓是她的宗旨！重视每场婚礼美感与情感的融合，因为她始终觉得实现每个女孩的婚礼梦是她作为一位婚礼设计的意义所在!">
+                                <h3>小东</h3>
+                                <h5>艺术设计师</h5>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="team_info" data-name="鱼尾" data-duty="摄影师"
+                                   data-avatar="images/img_home/1466587272362.jpg"
+                                   data-desc="摩羯座的她热爱生活,喜欢旅行、喜欢摄影！毕业于设计专业的她对于婚礼装饰有着自己独特的想法。力求婚礼细节布置的完美可谓是她的宗旨！重视每场婚礼美感与情感的融合，因为她始终觉得实现每个女孩的婚礼梦是她作为一位婚礼设计的意义所在!">
+                                <h3>鱼尾</h3>
+                                <h5>摄影师</h5>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="team_info" data-name="莫非" data-duty="氛围设计师"
+                                   data-avatar="images/img_home/1466587272362.jpg"
+                                   data-desc="摩羯座的她热爱生活,喜欢旅行、喜欢摄影！毕业于设计专业的她对于婚礼装饰有着自己独特的想法。力求婚礼细节布置的完美可谓是她的宗旨！重视每场婚礼美感与情感的融合，因为她始终觉得实现每个女孩的婚礼梦是她作为一位婚礼设计的意义所在!">
+                                <h3>莫非</h3>
+                                <h5>氛围设计师</h5>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="team_info" data-name="潇湘" data-duty="视觉设计师"
+                                   data-avatar="images/img_home/1466587272362.jpg"
+                                   data-desc="摩羯座的她热爱生活,喜欢旅行、喜欢摄影！毕业于设计专业的她对于婚礼装饰有着自己独特的想法。力求婚礼细节布置的完美可谓是她的宗旨！重视每场婚礼美感与情感的融合，因为她始终觉得实现每个女孩的婚礼梦是她作为一位婚礼设计的意义所在!">
+                                <h3>潇湘</h3>
+                                <h5>视觉设计师</h5>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div id="about_idea">
+                    <div class="about_idea_box whether-no-swipe-box">
+                      <div class="whether-no-swipe-item">
+                        <div class="idea_streamer">
+                          <div class="streamer_left">
+                            <h2>BRAND IDEA</h2>
+                            <span>品牌理念</span>
+                          </div>
+                        </div>
+                        <article>
+                          汇爱婚礼自2006年成立伊始就致力于打造私人专属的品质婚礼，以独特的婚礼理念、完美细致的婚礼服务、创意时尚的设计方案得到了客户、媒体及同行们的一致好评。迄今为止，汇爱已为邓超孙俪、高云翔董璇、贾乃亮李小璐、撒贝宁李白等多位明星举办婚礼。
+                          <br>我们关注婚礼，但我们更关注你的感受。
+                          <br>服务内容：婚礼策划、宴会设计、企业活动
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="about_story">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" view="consulting">
+            <div class="about_container">
+              <div class="tabSwitch_box vertical AboutSwitch">
+                <div class="switch_header font_reDraw">
+                  <li class="active" data-target="#contact_chengdu">成都</li>
+                </div>
+                <div class="switch_body">
+                  <div id="contact_chengdu">
+                    <div class="about_idea_box">
+                      <div class="idea_streamer">
+                        <div class="streamer_left">
+                          <h2>CONSULTING</h2>
+                          <span>咨询预约</span>
+                        </div>
+                      </div>
+                      <div class="contact_box">
+                        <div class="contact_part">
+                          <h3>公司地址</h3>
+                          <h5>Address</h5>
+                          <article>
+                            北京朝阳区百子湾路21号·旬会所（东四环内-百子湾桥西北角）
+                          </article>
+                        </div>
+                        <div class="contact_part">
+                          <h3>预约及咨询电话</h3>
+                          <h5>Telephone</h5>
+                          <article>
+                            <strong>4008-500-521</strong><br>
+                              <strong>010-6606-2892</strong>
+                          </article>
+                        </div>
+                        <span class="custom_button contact_consult_btn">服务咨询及预定</span>
+                        <div class="contact_part consult_form">
+                          <span class="btn_close">X</span>
+                          <h3>服务咨询及预定</h3>
+                          <h5>Service and order</h5>
+                          <form action="">
+                            <input type="text" name="username" placeholder="姓名">
+                            <input type="text" name="userwedding" placeholder="预计婚期/城市+酒店">
+                            <input type="text" name="userphone" placeholder="联系电话">
+                            <input type="text" name="usersocial" placeholder="微信/微博/邮箱">
+                            <button>提交</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" view="joinus">
+            <div class="joinus_container">
+              <div class="tabSwitch_box vertical JoinUsSwitch">
+                <div class="switch_header font_reDraw">
+                  <li class="active" data-target="#banquet_designer">
+                    <div class="list_box">
+                      <span>01</span>
+                      <h5>宴会设计师</h5>
+                      <h5>Banquet Designer</h5>
+                    </div>
+                  </li>
+                  <li data-target="#wedding_planner">
+                    <div class="list_box">
+                      <span>02</span>
+                      <h5>婚礼策划师</h5>
+                      <h5>Wedding Planner</h5>
+                    </div>
+                  </li>
+                  <li data-target="#graphic_designer">
+                    <div class="list_box">
+                      <span>03</span>
+                      <h5>平面设计师</h5>
+                      <h5>Graphic designer</h5>
+                    </div>
+                  </li>
+                </div>
+                <div class="switch_body">
+                  <div class="active whether-no-swipe-box" id="banquet_designer">
+                    <div class="position_des whether-no-swipe-item">
+                      <h3>宴会设计师</h3>
+                      <describe>
+                        <h3>职位描述：</h3>
+                        <article>
+                          <p>1.为客户提供合理及富有创意的设计方案；</p>
+                          <p>2. 准确及时地完成所需设计方案及相关设计图纸； </p>
+                          <p>3. 为客户做创意演示和设计方案说明；</p>
+                          <p>4. 负责管理从设计到现场实现的全部过程管理和指导。</p>
+                        </article>
+                        <h3>任职要求：</h3>
+                        <article>
+                          <p>1. 专科及以上学历，展览设计/环境艺术/艺术设计类相关设计专业； 有成熟的独立设计作品；</p>
+                          <p>2. 具有良好沟通与人际交往能力，思维敏锐，品味时尚，眼界开阔；</p>
+                          <p>3. 具有较强的视觉呈现能力以及色彩把控能力；</p>
+                          <p>4. 具有良好的审美意识和独特的创意构思； </p>
+                          <p>5. 美术手绘功底扎实，并精通设计类相关电脑软件Photoshop、AI等软件。</p>
+                        </article>
+                        <a class="custom_button" href="mailto: hr@wrewedding.com">hr@wrewedding.com</a>
+                      </describe>
+                    </div>
+
+                  </div>
+                  <div class="whether-no-swipe-box" id="wedding_planner">
+                    <div class="position_des whether-no-swipe-item">
+                      <h3>婚礼策划师</h3>
+                      <describe>
+                        <h3>职位描述：</h3>
+                        <article>
+                          <p>1.为客户提供合理及富有创意的设计方案；</p>
+                          <p>2. 准确及时地完成所需设计方案及相关设计图纸； </p>
+                          <p>3. 为客户做创意演示和设计方案说明；</p>
+                          <p>4. 负责管理从设计到现场实现的全部过程管理和指导。</p>
+                        </article>
+                        <h3>任职要求：</h3>
+                        <article>
+                          <p>1. 专科及以上学历，展览设计/环境艺术/艺术设计类相关设计专业； 有成熟的独立设计作品；</p>
+                          <p>2. 具有良好沟通与人际交往能力，思维敏锐，品味时尚，眼界开阔；</p>
+                          <p>3. 具有较强的视觉呈现能力以及色彩把控能力；</p>
+                          <p>4. 具有良好的审美意识和独特的创意构思； </p>
+                          <p>5. 美术手绘功底扎实，并精通设计类相关电脑软件Photoshop、AI等软件。</p>
+                        </article>
+                        <a class="custom_button" href="mailto: hr@wrewedding.com">hr@wrewedding.com</a>
+                      </describe>
+                    </div>
+                  </div>
+                  <div id="graphic_designer" class="whether-no-swipe-box">
+                    <div class="position_des whether-no-swipe-item">
+                      <h3>平面设计师</h3>
+                      <describe>
+                        <h3>职位描述：</h3>
+                        <article>
+                          <p>1.为客户提供合理及富有创意的设计方案；</p>
+                          <p>2. 准确及时地完成所需设计方案及相关设计图纸； </p>
+                          <p>3. 为客户做创意演示和设计方案说明；</p>
+                          <p>4. 负责管理从设计到现场实现的全部过程管理和指导。</p>
+                        </article>
+                        <h3>任职要求：</h3>
+                        <article>
+                          <p>1. 专科及以上学历，展览设计/环境艺术/艺术设计类相关设计专业； 有成熟的独立设计作品；</p>
+                          <p>2. 具有良好沟通与人际交往能力，思维敏锐，品味时尚，眼界开阔；</p>
+                          <p>3. 具有较强的视觉呈现能力以及色彩把控能力；</p>
+                          <p>4. 具有良好的审美意识和独特的创意构思； </p>
+                          <p>5. 美术手绘功底扎实，并精通设计类相关电脑软件Photoshop、AI等软件。</p>
+                        </article>
+                        <a class="custom_button" href="mailto: hr@wrewedding.com">hr@wrewedding.com</a>
+                      </describe>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" view="partners">
+            <div class="partner_container">
+              <div class="partner_swiper_box" id="partner_swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide" style="background-image: url('images/tmp/1433391871371.jpg')"></div>
+                  <div class="swiper-slide" style="background-image: url('images/tmp/1433391932859.jpg')"></div>
+                  <div class="swiper-slide" style="background-image: url('images/tmp/1433391871371.jpg')"></div>
+                  <div class="swiper-slide" style="background-image: url('images/tmp/1433391932859.jpg')"></div>
+                  <div class="swiper-slide" style="background-image: url('images/tmp/1433391871371.jpg')"></div>
+                  <div class="swiper-slide" style="background-image: url('images/tmp/1433391932859.jpg')"></div>
+                  <div class="swiper-slide" style="background-image: url('images/tmp/1433391871371.jpg')"></div>
+                  <div class="swiper-slide" style="background-image: url('images/tmp/1433391932859.jpg')"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer_container container-fluid">
+      <ul class="social_media">
+        <li class="wechat"><a></a></li>
+        <li class="weibo"><a></a></li>
+        <li class="qq"><a href=""></a></li>
+        <div class="wechat_code_box">
+          <img src="images/tmp/qcode.jpg" alt="">
+        </div>
+      </ul>
+      <nav class="foot_nav">
+        <li class="active"><a class="navigation_link" href="#joinus">加入我们</a></li>
+        <li><a class="navigation_link" href="#partners">合作伙伴</a></li>
+        <li><span>客服热线<r>:</r> <strong>400-500-521</strong></span></li>
+      </nav>
+    </footer>
+    <section class="iframe_details_container">
+      <div class="frame_box pv_picture_frame"><span class="pv_back_btn custom_button frame_close_btn"></span></div>
+      <div class="frame_box pv_video_frame"></div>
+      <div class="frame_box news_frame"><span class="frame_close_btn"></span></div>
+    </section>
+    <!--字体加载-->
+    <script type="text/javascript">
+      $youziku.load(".font_reDraw", "9fbcbb39eccd46fe98359fee69577a4f", "minijianxixingkai");
+      /*．．．*/
+      $youziku.draw();
+    </script>
+    <script src="scripts/lib/requirejs/require.js" data-main="scripts/main.js" type="text/javascript"></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+@import "../plugins/plugin_mixin_func";
+@import "../plugins/plugin_config";
+//styles for mobile
+
+@include mobile-screen(){
+  //Header Begin
+  @import "../page_mobile/_header";
+
+  //Home Section
+  @import "../page_mobile/home_section";
+
+  //frame sections
+  @import "../page_mobile/frame_list_box";
+  @import "../page_mobile/frame_details_box";
+
+  //Footer
+  @import "../page_mobile/_footer";
+}
+
+
+

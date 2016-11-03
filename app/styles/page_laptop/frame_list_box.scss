@@ -1,0 +1,23 @@
+@import "../plugins/plugin_common";
+@import "../plugins/plugin_config";
+
+.frame_list_box{
+  position: absolute;
+  z-index: 10;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: none;
+  visibility: hidden;
+  opacity: 0;
+  @include transition();
+  background-color: #ffffff;
+  &.padding_top{
+    padding-top: 35px;
+  }
+  &.active{
+    visibility: visible;
+    opacity: 1;
+  }
+}

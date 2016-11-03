@@ -1,0 +1,228 @@
+//Swiper Button Animate
+.custom_button_next,.custom_button_prev{
+  z-index: 10;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  height: 80px;
+  margin-top: -40px;
+  width: 30px;
+  background-color: darken($main_black,10%);
+  @include bg_Manual(auto 20px);
+  @include transition();
+  cursor: pointer;
+}
+@include mobile-screen(){
+  .custom_button_next,.custom_button_prev{
+    display: none;
+  }
+}
+.custom_button_prev{
+  left: 0;
+  background-image: url("./../images/img_home/arrow_left.png");
+}
+.custom_button_next{
+  right: 0;
+  background-image: url("./../images/img_home/arrow_right.png");
+}
+.swiper-container{
+  position: relative;
+  .custom_button_next{
+    right: -40px;
+  }
+  .custom_button_prev{
+    left: -40px;
+  }
+  &:hover{
+    .custom_button_next{
+      right: 0;
+    }
+    .custom_button_prev{
+      left: 0;
+    }
+  }
+}
+
+//TabSwtcher Styles
+.tabSwitch_box{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .switch_header{
+    height: 40px;
+    width: 100%;
+    list-style: none;
+    line-height: 40px;
+    a.btn_more{
+      float: right;
+      font-family: "Adobe Caslon Pro";
+      display: inline-block;
+      padding: 0 15px;
+      color: #ffffff;
+      font-size: 12px;
+      height: 30px;
+      min-width: 70px;
+      line-height: 32px;
+      margin-top: 3px;
+      text-align: center;
+      background-color: $main_black;
+      border: 1px solid $main_black;
+      cursor: pointer;
+      @include transition();
+      &:before{
+        content: 'MORE';
+        @include transition();
+      }
+      &:hover:before{
+        content: '更多';
+      }
+      &.onListing{
+        &:before{
+          content: 'BACK';
+        }
+        &:hover:before{
+          content: '返回';
+        }
+        background-color: #ffffff!important;
+        border-color: $main_black!important;
+        color: $main_black;
+      }
+      @include mobile-screen(){
+        &{
+          line-height: 30px;
+        }
+        &:before{
+          content: '更多';
+          @include transition(none);
+        }
+        &.onListing{
+          &:before{
+            content: '返回';
+          }
+        }
+      }
+    }
+    li[data-target]{
+      position: relative;
+      float: left;
+      cursor: pointer;
+      height: 100%;
+      font-size: $title_size;
+      padding-right: 15px;
+      color: lighten($main_black,20%);
+      text-align: left;
+      @include transition();
+      &:after {
+        position: absolute;
+        left: 0;
+        bottom: 5px;
+        content: '';
+        display: inline-block;
+        width: 0px;
+        border-top: 1px solid lighten($main_black, 20%);
+        @include transition();
+      }
+      &.active,
+      &:hover{
+        color: $main_black;
+        &:after{
+          width: 40px;
+        }
+      }
+    }
+  }
+  iframe{
+    @include bg_Manual(30px 30px, no-repeat, center center);
+    background-image: url("./../images/icon/icon_loading.gif");
+  }
+  @include laptop-screen(){
+    .switch_body{
+      position: relative;
+      width: 100%;
+      height: calc(100% - 40px);
+      &>div{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0;
+        @include scale(0);
+        @include transition(all 0.2s ease-out);
+        &.active{
+          z-index: 2;
+          animation: slideInUp 0.5s 0.2s cubic-bezier(0.65, 0.46, 0.19, 1.04);
+          animation-fill-mode: forwards;
+        }
+        iframe {
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+
+  @include mobile-screen(){
+    .switch_body{
+      position: relative;
+      width: 100%;
+      height: calc(100% - 40px);
+      &>div{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0;
+        @include transition(all 0.2s ease-out);
+        &.active{
+          z-index: 2;
+          opacity: 1;
+          @include transitionDelay();
+        }
+        -webkit-overflow-scrolling:touch;
+        overflow:auto;
+        iframe {
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+
+  @include laptop-screen(){
+    &.vertical{
+      .switch_header{
+        position: relative;
+        width: 120px;
+        height: 100%;
+        float: left;
+        padding-top: 50px;
+        li{
+          float: none;
+          height: auto;
+        }
+        a.btn_more{
+          position: absolute;
+          bottom: 150px;
+          left: 0;
+        }
+      }
+      .switch_body{
+        width: calc(100% - 120px);
+        height: 100%;
+        float: right;
+        &>div{
+          iframe {
+            padding-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+

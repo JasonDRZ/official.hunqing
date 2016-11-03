@@ -1,0 +1,16 @@
+//scss Config for full manual css
+$main_black: #333333;
+
+$title_size: 16px;
+$content_size: 14px;
+$sub_content-size: 12px;
+
+
+@include mobile-screen(){
+  html{
+    font-size: 62.5%;
+  }
+}
+
+
+

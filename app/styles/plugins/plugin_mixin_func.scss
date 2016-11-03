@@ -1,0 +1,152 @@
+
+@mixin box-sizing ($sizing) {
+  box-sizing:$sizing;
+}
+
+//background controllers
+@mixin bg_y_full($y: 100%) {
+  background-size: auto $y;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin bg_x_full($x: 100%) {
+  background-size: $x auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin bg_full($x: 100%,$y: 100%) {
+  background-size: $x $y;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin bg_Manual($size: 100% 100%,$repeat: no-repeat,$position: center) {
+  background-size: $size;
+  background-repeat: $repeat;
+  background-position: $position;
+}
+
+//Transition Controller
+@mixin transition($sim: all 0.3s ease){
+  transition: $sim;
+}
+@mixin transitionDelay($sec: 0.2s) {
+  transition-delay: $sec;
+}
+//Transform Controller
+@mixin transformOrigin($o: center center){
+  transform-origin: $o;
+}
+//translate
+@mixin translate($x:0,$y:0,$z:0){
+  transform: translate3d($x,$y,$z);
+}
+@mixin translateX($x:0){
+  transform: translate3d($x,0,0);
+}
+@mixin translateY($y:0){
+  transform: translate3d(0,$y,0);
+}
+@mixin translateZ($z:0){
+  transform: translate3d(0,0,$z);
+}
+//rotate
+@mixin rotate($x: 0deg,$y: 0deg,$z: 0deg){
+  transform: rotateX($x) rotateY($y) rotateZ($z);
+}
+@mixin rotateX($x: 0deg){
+  transform: rotateX($x);
+}
+@mixin rotateY($y: 0deg){
+  transform: rotateY($y);
+}
+@mixin rotateZ($z: 0deg){
+  transform: rotateZ($z);
+}
+//scale
+@mixin scale($s: 1){
+  transform: scale($s);
+}
+
+
+//Media Common Controller
+@mixin mobile-screen($res: 768px) {
+  @media only screen and (max-width: $res) {
+    @content;
+  }
+}
+@mixin laptop-screen($res: 769px) {
+  @media only screen and (min-width: $res) {
+    @content;
+  }
+}
+
+
+//Text Ellipsis
+@mixin ellipsis(){
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+//Flex Align Controller
+@mixin flex_align ($content: center,$item: center,$box: center){
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: $content;
+    justify-content: $content;
+    -webkit-box-align: $box;
+    -ms-flex-align: $box;
+    -webkit-align-items: $item;
+    align-items: $item;
+}
+
+@keyframes slideInUp {
+  from{
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to{
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from{
+    opacity: 0;
+    @include scale(0);
+  }
+  to{
+    opacity:1;
+    @include scale(1)
+  }
+}
+
+@keyframes fadeOutDown {
+  0%{
+    opacity: 0;
+    @include translateY(0);
+  }
+  20%{
+    opacity: 1;
+    @include translateY(0);
+  }
+  50%{
+    opacity: 0;
+    @include translateY(15px);
+  }
+  100%{
+    opacity: 0;
+    @include translateY(15px);
+  }
+}

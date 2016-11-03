@@ -1,0 +1,61 @@
+@import "../plugins/plugin_common";
+@import "../plugins/plugin_config";
+
+.iframe_details_container{
+  .frame_box{
+    overflow: auto;
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
+    &.pv_video_frame{
+      width: 320px;
+      height: 230px;
+    }
+    &.pv_picture_frame{
+      .pv_back_btn{
+        position: fixed;
+        top: 5px;
+        right: 5px;
+        left: auto;
+        height: 35px;
+        line-height: 35px;
+        width: 35px;
+        min-width: 35px;
+        padding: 0;
+        background-color: transparent;
+        &:before,
+        &:after{
+          content: '';
+          display: block;
+          position: absolute;
+          margin-left: 0;
+          line-height: 0;
+          border-top: 1px solid lighten($main_black,40%);
+          top: 50%;
+          left: 0;
+          width: 100%;
+          transform-origin: 50% 50%;
+        }
+        &:before{
+          @include rotateZ(45deg);
+        }
+        &:after{
+          @include rotateZ(-45deg);
+        }
+      }
+    }
+    &.news_frame{
+      .frame_close_btn{
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        height: 35px;
+        width: 35px;
+      }
+    }
+    &.active{
+      z-index: 2;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

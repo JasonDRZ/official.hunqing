@@ -1,0 +1,102 @@
+@import "../plugins/plugin_common";
+@import "../plugins/plugin_config";
+
+.iframe_details_container{
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  background-color: rgba(0,0,0,0);
+  @include transition();
+  &.active{
+    visibility: visible;
+    background-color: rgba(0,0,0,0.5);
+  }
+  .frame_box{
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    @include transition(0.5s all ease);
+    .frame_close_btn{
+      cursor: pointer;
+    }
+    iframe{
+      height: 100%;
+      width: 100%;
+      border: none;
+      @include bg_Manual(30px 30px, no-repeat, center center);
+      background-image: url("./../images/icon/icon_loading.gif");
+    }
+    &.pv_video_frame{
+      width: 760px;
+      height: 560px;
+      top: 50%;
+      left: 50%;
+      @include translate(-50%, -50%);
+    }
+    &.pv_picture_frame{
+      .pv_back_btn{
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        height: 45px;
+        line-height: 40px;
+        width: 150px;
+        cursor: pointer;
+        text-align: center;
+        background-color: darken($main_black,20%);
+        &:before{
+          font-size: 1.5em;
+          content: '←';
+        }
+        &:after{
+          margin-left: 15px;
+          line-height: 45px;
+          content: '返回';
+          font-size: $title_size;
+        }
+      }
+    }
+    &.news_frame{
+      .frame_close_btn{
+        position: absolute;
+        top: 15px;
+        right: 45px;
+        height: 40px;
+        width: 40px;
+        border: 1px solid $main_black;
+        border-radius: 50%;
+        &:before,
+        &:after{
+          content: '';
+          display: block;
+          position: absolute;
+          border-top: 1px solid $main_black;
+          top: 50%;
+          left: 10%;
+          width: 80%;
+        }
+        &:before{
+          @include rotateZ(45deg);
+        }
+        &:after{
+          @include rotateZ(-45deg);
+        }
+      }
+    }
+    &.active{
+      z-index: 2;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

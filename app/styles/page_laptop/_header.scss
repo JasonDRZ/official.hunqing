@@ -1,0 +1,103 @@
+@import "../plugins/plugin_mixin_func";
+@import "../plugins/plugin_config";
+
+/* Heander begin */
+.container-fluid{
+  padding: 15px 4rem !important;
+}
+.header_container{
+  position: relative;
+  z-index: 9999;
+  padding: 10px 4rem !important;
+  height: 90px;
+  @include laptop-screen(){
+    &:after{
+      z-index: -1;
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 25px;
+      left: 4rem;
+      width: calc(100% - 8rem);
+      border-top: 1px solid lighten($main_black,40%);
+    }
+  }
+  img.logo{
+    float: left;
+    height: 92%;
+    margin-left: 30px;
+    margin-top: 3px;
+    background-color: #ffffff;
+  }
+  img.logo_mo{
+    display: none;
+  }
+  img.loge_right{
+    float: right;
+    margin-top: 16px;
+  }
+  nav.navigation{
+    float: left;
+    height: 100%;
+    list-style: none;
+    padding-left: 50px;
+    li{
+      position: relative;
+      float: left;
+      padding: 18px 40px;
+      text-align: center;
+      &.nav_home,
+      &.nav_logo{
+        display: none;
+      }
+      a{
+        display: inline-block;
+        color: $main_black;
+        font-size: 1.2em;
+        line-height: 1.1em;
+        small{
+          font-weight: 200;
+          color: lighten($main_black,50%);
+          display: block;
+          font-size: 0.8em;
+          font-family: serif;
+        }
+      }
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        margin-left: -6px;
+        border-width: 6px;
+        border-style: solid;
+        border-color: transparent;
+        border-bottom-color: rgba(0,0,0,0.2);
+        @include transition();
+        @include translateY(30px);
+        opacity: 0;
+      }
+      &.active{
+        a{
+          color: darken($main_black,100%);
+          small {
+            font-weight: 700;
+            color: darken($main_black,50%);
+          }
+        }
+        &:after{
+          @include translateY(0px);
+          opacity: 1;
+        }
+      }
+    }
+  }
+  label.nav_button {
+    display: none;
+  }
+  .head_footer{
+    display: none;
+  }
+}
+//header end

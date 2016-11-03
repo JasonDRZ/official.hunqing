@@ -1,0 +1,87 @@
+//footer begin
+.footer_container{
+  z-index: 999;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  padding: 20px 4rem;
+  .foot_nav,
+  .social_media{
+    float: right;
+    list-style: none;
+    li{
+      padding: 0px 10px;
+      float: left;
+      font-size: 12px;
+    }
+  }
+  .foot_nav{
+    li{
+      line-height: 20px;
+      margin: 5px 0;
+      text-align: center;
+      border-right: 1px solid lighten($main_black,10%);
+      color: lighten($main_black,10%);
+      a{
+        color: lighten($main_black,10%);
+      }
+      &:last-child{
+        border-right: none;
+      }
+      &.active,
+      &:hover{
+        a{
+          font-weight: 700;
+          color: darken($main_black,30%);
+        }
+      }
+    }
+  }
+  .social_media{
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 0;
+    padding: 0;
+    li{
+      padding: 0px 10px;
+      cursor: pointer;
+      a{
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        @include bg_Manual(140%);
+        opacity: 0.6;
+      }
+      &.wechat a{
+          background-image: url("./../images/icon/btn_wechat.png");
+      }
+      &.qq a{
+          background-image: url("./../images/icon/btn_qq.png");
+      }
+      &.weibo a{
+          background-image: url("./../images/icon/btn_sina.png");
+      }
+      &:last-child{
+        padding-right: 0;
+      }
+    }
+    .wechat_code_box{
+      position: absolute;
+      right: 90px;
+      bottom: 25px;
+      background-color: #ffffff;
+      padding: 10px;
+      @include scale(0);
+      @include transition();
+      @include transformOrigin(right bottom)
+    }
+    li.wechat:hover ~ .wechat_code_box,
+    .wechat_code_box:hover{
+      @include scale();
+    }
+  }
+
+}
+//footer end

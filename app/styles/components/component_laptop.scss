@@ -1,0 +1,31 @@
+@import "../plugins/plugin_mixin_func";
+@import "../plugins/plugin_config";
+//for Laptop
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+//laptop header
+@import "../page_laptop/_header";
+
+//Home Section
+@import "../page_laptop/home_section";
+
+//Wedding News List
+@import "../page_laptop/wed_news";
+
+//Wedding Picture Video List
+@import "../page_laptop/wed_pic";
+
+//frame sections
+@import "../page_laptop/frame_list_box";
+@import "../page_laptop/frame_details_box";
+
+//laptop footer
+@import "../page_laptop/_footer";
+
+
+
