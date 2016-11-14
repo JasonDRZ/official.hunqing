@@ -1,7 +1,7 @@
 /**
  * Created by JasonD on 16/10/30.
  */
-define(['jquery', 'require'], function ($,require) {
+define(['jquery', 'require', 'part/history_state'], function ($,require,historyStrate) {
   //获取所有的iframe节点
   var detailFrame = $('.iframe_details_container');
   //插入iframe节点，附带检测
@@ -60,13 +60,17 @@ define(['jquery', 'require'], function ($,require) {
     child.addClass('active');
     if (cb) cb(child);
   };
+  //关闭
   var detailsFrameClose = function (mainFrame) {
     mainFrame.removeClass('active');
     mainFrame.children().each(function (i,ele) {
       $(ele).children('iframe').remove();
       $(ele).removeClass('active');
-    })
+    });
+    //去掉链接中的search state
+    historyStrate.distroySearchPage();
   }
+  // 关闭
   detailFrame.click(function () {
     detailsFrameClose(detailFrame);
   })

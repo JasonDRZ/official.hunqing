@@ -18,8 +18,9 @@ define(['jquery','swiper','part/history_state'], function ($,Swiper,historyState
         //控制导航变化
         $('a.navigation_link').parent('li').removeClass('active');
         $('a.navigation_link[href="#'+activeID+'"]').parent('li').addClass('active');
-        //添加新的history state
-        historyState.push('#'+activeID);
+        //如果详情页未打开，则添加新的history state
+        !!!historyState.onPageOpen &&
+        historyState.pushHashPage('#'+activeID);
       }
       // onlyExternal : true,//禁止拖动
     }),
@@ -97,6 +98,28 @@ define(['jquery','swiper','part/history_state'], function ($,Swiper,historyState
         }
       }
     }),
+    pub_activitise: new Swiper(
+      '#pub_activitise_swiper',{
+        slidesPerView: 4,
+        slidesPerColumn: 1,
+        spaceBetween: 1,
+        // loop: true,
+        lazyLoading : true,
+        //freeMode: true//移动设备上启用
+        nextButton: '.pvswiper-button-next',
+        prevButton: '.pvswiper-button-prev',
+        breakpoints: {
+          1920: {
+            slidesPerView: 4,
+            slidesPerColumn: 1
+          },
+          768: {
+            slidesPerView: 2,
+            slidesPerColumn: 2
+          }
+        }
+      }
+    ),
     po_video: new Swiper('#po_video_swiper',{
       slidesPerView: 4,
       spaceBetween: 1,
@@ -120,7 +143,6 @@ define(['jquery','swiper','part/history_state'], function ($,Swiper,historyState
     news_news: new Swiper('#news_news_swiper',{
       slidesPerView: 4,
       spaceBetween: 1,
-      loop: true,
       lazyLoading : true,
       //freeMode: true//移动设备上启用
       nextButton: '.newsSwiper-button-next',
@@ -137,7 +159,22 @@ define(['jquery','swiper','part/history_state'], function ($,Swiper,historyState
     news_crowd: new Swiper('#news_crowd_swiper',{
       slidesPerView: 4,
       spaceBetween: 1,
-      loop: true,
+      lazyLoading : true,
+      //freeMode: true//移动设备上启用
+      nextButton: '.newsSwiper-button-next',
+      prevButton: '.newsSwiper-button-prev',
+      breakpoints: {
+        1920: {
+          slidesPerView: 4
+        },
+        768: {
+          slidesPerView: 1
+        }
+      }
+    }),
+    about_history: new Swiper('#about_history_swiper',{
+      slidesPerView: 4,
+      spaceBetween: 1,
       lazyLoading : true,
       //freeMode: true//移动设备上启用
       nextButton: '.newsSwiper-button-next',

@@ -1,7 +1,7 @@
 /**
  * Created by JasonD on 16/11/1.
  */
-define(['jquery','require'], function ($,require) {
+define(['jquery','require','part/history_state'], function ($,require,historyState) {
   //a标签链接type属性值
   var link_type = {
     'pv_video': 'pv_video',
@@ -41,16 +41,19 @@ define(['jquery','require'], function ($,require) {
         case link_type.pv_video:{
           event.preventDefault();
           framesWork.pv_video_frame(href);
+          historyState.pushSearchPage(type,href);
           break;
         }
         case link_type.pv_picture:{
           event.preventDefault();
           framesWork.pv_picture_frame(href);
+          historyState.pushSearchPage(type,href);
           break;
         }
         case link_type.news_content:{
           event.preventDefault();
           framesWork.news_frame(href);
+          historyState.pushSearchPage(type,href);
         }
       }
     }

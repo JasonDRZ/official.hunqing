@@ -14,7 +14,7 @@ define(['require','jquery','page/swipers','part/history_state'], function (requi
         swipers.sectionBody.slideTo(hrefTarg.index());
         $('a.navigation_link').parent('li').removeClass('active');
         $this.parent('li').addClass('active');
-        historyState.push(href);
+        historyState.pushHashPage(href);
         if ($('#nav_checker')[0].checked) $('#nav_checker')[0].checked = false;
       }
     }

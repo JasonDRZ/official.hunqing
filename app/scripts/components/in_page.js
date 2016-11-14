@@ -27,7 +27,8 @@ define(['jquery'], function ($) {
       '#consulting': '#consulting',
       '#joinus': '#joinus',
       '#partners': '#partners',
-      '#propose': '#propose'
+      '#propose': '#propose',
+      '#public': '#public'
     }
   };
 });

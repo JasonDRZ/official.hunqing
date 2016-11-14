@@ -162,144 +162,143 @@
     height: 100%;
     .NewsSwitch{
       .switch_body{
-        .news_swiper{
-          .swiper-slide{
-            position: relative;
-            .news_bg{
-              position: absolute;
-              z-index: -1;
-              top: 0;
-              left: 0;
-              height: 100%;
-              width: 100%;
-              @include bg_Manual(cover);
-              opacity: 0;
-              @include transition();
-            }
-            .news_content_box{
-              display: block;
-              height: 100%;
-              width: 100%;
-              position: relative;
-              .border_line{
-                position: absolute;
-                top: 20px;
-                left: 20px;
-                height: calc(100% - 40px);
-                width: calc(100% - 40px);
-                border: 1px solid lighten($main_black,70%);
-                border-radius: 5px;
-                @include transition();
-              }
-              .news_content{
-                position: absolute;
-                top: 50%;
-                left: 35px;
-                width: calc(100% - 70px);
-                @include translate(0,-50%);
-                @include transition();
-                em,span,p{
-                  display: block;
-                }
-                em{
-                  font-size: $content_size;
-                  font-style: normal;
-                  font-weight: 100;
-                  color: $main_black;
-                }
-                span{
-                  font-size: $title_size;
-                  font-weight: 700;
-                  margin-bottom: 25px;
-                  color: $main_black;
-                }
-                p{
-                  line-height: 2em;
-                  font-size: $sub_content-size;
-                  color: lighten($main_black,10%);
-                }
-                i.arrow{
-                  display: block;
-                  height: 15px;
-                  width: 80px;
-                  opacity: 0;
-                  margin-top: 15px;
-                  @include translateX(-150%);
-                  @include transition();
-                  @include transitionDelay();
-                  background: url("./../images/img_news/arrow_end.png") no-repeat left center,url("./../images/img_news/arrow_body.png") repeat-x center center,url("./../images/img_news/arrow_start.png") no-repeat right center;
-                }
-              }
-            }
-            &:hover{
-              .news_bg{
-                opacity: 1;
-              }
-              .border_line{
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                border-color: transparent;
-                border-radius: 0;
-                background-color: rgba(0,0,0,0.6);
-              }
-              .news_content{
-                top: 100%;
-                @include translate(0,calc(-100% - 35px));
-                em{
-                  font-size: 30px;
-                  font-style: normal;
-                  color: darken(#ffffff,10%);
-                }
-                span{
-                  color: darken(#ffffff,5%);
-                }
-                p{
-                  color: lighten($main_black,60%);
-                }
-                i.arrow{
-                  opacity: 1;
-                  @include translateX(0);
-                }
-              }
-            }
-            &[center_scale]:hover{
-              .news_bg{
-                opacity: 1;
-              }
-              .border_line{
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                border-color: transparent;
-                border-radius: 0;
-                background-color: rgba(0,0,0,0.4);
-              }
-              .news_content{
-                top: 100%;
-                @include translate(0,calc(-100% - 35px));
-                em{
-                  font-size: 30px;
-                  font-style: normal;
-                  color: darken(#ffffff,10%);
-                }
-                span{
-                  color: darken(#ffffff,5%);
-                }
-                p{
-                  color: lighten($main_black,60%);
-                }
-                i.arrow{
-                  opacity: 1;
-                  @include translateX(0);
-                }
-              }
-            }
+      }
+    }
+  }
+  .news_swiper{
+    .swiper-slide{
+      position: relative;
+      .news_bg{
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        @include bg_Manual(cover);
+        opacity: 0;
+        @include transition();
+      }
+      .news_content_box{
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        .border_line{
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          height: calc(100% - 40px);
+          width: calc(100% - 40px);
+          border: 1px solid lighten($main_black,70%);
+          border-radius: 5px;
+          @include transition();
+        }
+        .news_content{
+          position: absolute;
+          top: 50%;
+          left: 35px;
+          width: calc(100% - 70px);
+          @include translate(0,-50%);
+          @include transition();
+          em,span,p{
+            display: block;
+          }
+          em{
+            font-size: $content_size;
+            font-style: normal;
+            font-weight: 100;
+            color: $main_black;
+          }
+          span{
+            font-size: $title_size;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: $main_black;
+          }
+          p{
+            line-height: 2em;
+            font-size: $sub_content-size;
+            color: lighten($main_black,10%);
+          }
+          i.arrow{
+            display: block;
+            height: 15px;
+            width: 80px;
+            opacity: 0;
+            margin-top: 15px;
+            @include translateX(-150%);
+            @include transition();
+            @include transitionDelay();
+            background: url("./../images/img_news/arrow_end.png") no-repeat left center,url("./../images/img_news/arrow_body.png") repeat-x center center,url("./../images/img_news/arrow_start.png") no-repeat right center;
           }
         }
-
+      }
+      &:hover{
+        .news_bg{
+          opacity: 1;
+        }
+        .border_line{
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          border-color: transparent;
+          border-radius: 0;
+          background-color: rgba(0,0,0,0.6);
+        }
+        .news_content{
+          top: 100%;
+          @include translate(0,calc(-100% - 35px));
+          em{
+            font-size: 30px;
+            font-style: normal;
+            color: darken(#ffffff,10%);
+          }
+          span{
+            color: darken(#ffffff,5%);
+          }
+          p{
+            color: lighten($main_black,60%);
+          }
+          i.arrow{
+            opacity: 1;
+            @include translateX(0);
+          }
+        }
+      }
+      &[center_scale]:hover{
+        .news_bg{
+          opacity: 1;
+        }
+        .border_line{
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          border-color: transparent;
+          border-radius: 0;
+          background-color: rgba(0,0,0,0.4);
+        }
+        .news_content{
+          top: 100%;
+          @include translate(0,calc(-100% - 35px));
+          em{
+            font-size: 30px;
+            font-style: normal;
+            color: darken(#ffffff,10%);
+          }
+          span{
+            color: darken(#ffffff,5%);
+          }
+          p{
+            color: lighten($main_black,60%);
+          }
+          i.arrow{
+            opacity: 1;
+            @include translateX(0);
+          }
+        }
       }
     }
   }
@@ -339,16 +338,16 @@
               width: 80%;
               margin-bottom: 60px;
               h3{
-                font-size: $title_size + 5px;
+                font-size: $title_size + 18px;
               }
               h5{
-                font-size: $sub_content-size + 2px;
+                font-size: $sub_content-size + 5px;
                 color: lighten($main_black,30%);
               }
               article{
                 padding: 25px 0;
                 line-height: 2.1em;
-                font-size: $sub_content-size;
+                font-size: $sub_content-size + 4px;
                 color: lighten($main_black,10%);
               }
             }

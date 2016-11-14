@@ -75,7 +75,7 @@ window.addEventListener('DOMContentLoaded',function () {
               })
             }
           },300)
-        },500);
+        },1200);
         init ++;
       }
       endP();
