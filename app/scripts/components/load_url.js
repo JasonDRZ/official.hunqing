@@ -29,7 +29,7 @@ define(['jquery','page/swipers','part/history_state','part/in_page','part/frames
     //当前的操作
     var pageAr = location.search !== ''  && location.search.replace(/^\?/,'').split('=');
     //如果不存在则下一步
-    if (!!!pageAr) {loadHash(); return;};
+    if (!!!pageAr) {loadHash(false); return;};
     var type = pageAr[0],
       href = pageAr[1];
     switch (type){
@@ -54,9 +54,11 @@ define(['jquery','page/swipers','part/history_state','part/in_page','part/frames
     loadHash(true);
   }
   loadDetailPage();
+  var historySearch = '';
   //Listening history popstate event
   historyState.onPop(function (event) {
     console.log('ON POPSTATE')
-    loadHash();
+    framesWork.detailsClose();
+    loadDetailPage();
   });
 });

@@ -61,21 +61,23 @@ define(['jquery', 'require', 'part/history_state'], function ($,require,historyS
     if (cb) cb(child);
   };
   //关闭
-  var detailsFrameClose = function (mainFrame) {
-    mainFrame.removeClass('active');
-    mainFrame.children().each(function (i,ele) {
-      $(ele).children('iframe').remove();
-      $(ele).removeClass('active');
-    });
-    //去掉链接中的search state
-    historyStrate.distroySearchPage();
+  var detailsFrameClose = function (mainFrame,changeState) {
+    if (detailFrame.hasClass('active')) {
+      mainFrame.removeClass('active');
+      mainFrame.children().each(function (i,ele) {
+        $(ele).children('iframe').remove();
+        $(ele).removeClass('active');
+      });
+      //去掉链接中的search state
+      changeState && historyStrate.distroySearchPage();
+    }
   }
   // 关闭
   detailFrame.click(function () {
-    detailsFrameClose(detailFrame);
+    detailsFrameClose(detailFrame,true);
   })
   detailFrame.on('click','.frame_close_btn',function () {
-    detailsFrameClose(detailFrame);
+    detailsFrameClose(detailFrame,true);
   })
   return {
     pv_picture_frame: function (frameUrl) {

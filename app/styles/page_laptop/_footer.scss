@@ -49,10 +49,14 @@
       cursor: pointer;
       a{
         display: inline-block;
-        height: 20px;
-        width: 20px;
-        @include bg_Manual(140%);
+        height: 25px;
+        width: 25px;
+        @include bg_Manual(100%,no-repeat,center 0);
         opacity: 0.6;
+        @include transition();
+        &:hover{
+          @include bg_Manual(100%,no-repeat,center -24.5px);
+        }
       }
       &.wechat a{
           background-image: url("./../images/icon/btn_wechat.png");
@@ -70,7 +74,7 @@
     .wechat_code_box{
       position: absolute;
       right: 90px;
-      bottom: 25px;
+      bottom: 30px;
       background-color: #ffffff;
       padding: 10px;
       @include scale(0);
