@@ -16,13 +16,15 @@ define(['jquery', 'require', 'part/history_state'], function ($,require,historyS
       }
     }
     var frame = document.createElement('iframe');
-    frame.src = fsrc;
+    //去掉主域与子域之间的跨域问题
+    frame.src = fsrc.replace('http://wedmore.cn','').replace('http://www.wedmore.cn','');
     frame.className = className ? className : '';
     frame.frameBorder = 0;
     frame.onload = function () {
-      this.style.backgroundImage = '';
+      frame.style.backgroundImage = '';
+
       //处理iframe文档内部的a标签事件
-      var targAs = this.contentDocument.getElementsByTagName('a');
+      var targAs = frame.contentDocument.getElementsByTagName('a');
       $.each(targAs,function (i,ele) {
         ele.onclick = function (e) {
           var self = this;

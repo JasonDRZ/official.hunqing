@@ -12,6 +12,7 @@ define([], function () {
     },
     //创建详情页面的history state
     pushSearchPage: function (type,url) {
+      url = encodeURIComponent(url);
       window.history.pushState({},null, '?' +type + '=' + url + window.location.hash);
     },
     //去掉详情页的state

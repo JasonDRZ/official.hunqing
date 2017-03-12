@@ -53,12 +53,12 @@
       }
       a{
         display: inline-block;
-        color: $main_black;
+        color: lighten($main_black,30%);
         font-size: 1.2em;
         line-height: 1.1em;
         small{
           font-weight: 200;
-          color: lighten($main_black,50%);
+          color: lighten($main_black,30%);
           display: block;
           font-size: 0.8em;
           font-family: serif;
@@ -81,9 +81,8 @@
       }
       &.active{
         a{
-          color: darken($main_black,100%);
+          color: darken($main_black,50%);
           small {
-            font-weight: 700;
             color: darken($main_black,50%);
           }
         }
@@ -91,6 +90,20 @@
           @include translateY(0px);
           opacity: 1;
         }
+      }
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1110px) {
+    img.logo{
+      margin-left: 10px;
+    }
+    img.loge_right{
+      display: none;
+    }
+    nav.navigation{
+      padding-left: 30px;
+      li{
+        padding: 18px 15px;
       }
     }
   }

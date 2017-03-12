@@ -4,10 +4,11 @@
 define(['jquery','part/switcher'], function ($) {
   var teamBox = $('#about_team');
   var memberShowBox = teamBox.find('#team_member_show_box'),
-      memberShowTmp = memberShowBox.html(),
+      memberShowInfo = memberShowBox.children('.whether-no-swipe-item'),
+      memberShowTmp = memberShowInfo.html(),
       memberIndex = teamBox.find('#team_members_index_swiper'),
       memberIndexSlide = memberIndex.children('.swiper-wrapper').children('.swiper-slide');
-  memberShowBox.empty();
+  memberShowInfo.empty();
   var regE = function (str) {
     return new RegExp('{{'+str+'}}','g');
   }
@@ -22,7 +23,7 @@ define(['jquery','part/switcher'], function ($) {
       };
     $this.siblings('.swiper-slide').attr('aria-selected','false');
     $this.attr('aria-selected','true');
-    memberShowBox.html(function () {
+    memberShowInfo.html(function () {
       var _html = memberShowTmp;
       for (var k in memberData) {
         _html = _html.replace(regE(k),memberData[k]);

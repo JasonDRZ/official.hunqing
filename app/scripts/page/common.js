@@ -54,11 +54,15 @@ define(['jquery','part/link_control','page/swipers'],function ($,linkControl,swi
     if (scrollDir == 'up'){
       if (upTri == 1) $this.data('sideUpTrigger',2);
       else if (upTri == 2) {
-        setTimeout(swipers.sectionBody.slidePrev,300);
+        setTimeout(function(){
+          swipers.sectionBody.slidePrev();
+        },300);
         $this.data('sideDownTrigger',3);
       }
       else if (upTri == 3 && (nY - this['startY'] >= 50)){
-        setTimeout(swipers.sectionBody.slidePrev,300);
+        setTimeout(function(){
+          swipers.sectionBody.slidePrev();
+        },300);
         $this.data('sideDownTrigger',3);
       }
     }
@@ -66,16 +70,22 @@ define(['jquery','part/link_control','page/swipers'],function ($,linkControl,swi
     else if (scrollDir == 'down') {
       if (downTri == 1) $this.data('sideDownTrigger',2);
       else if (downTri == 2) {
-        setTimeout(swipers.sectionBody.slideNext,300);
+        setTimeout(function(){
+          swipers.sectionBody.slideNext();
+        },300);
         $this.data('sideDownTrigger',3);
       } else if (downTri == 3 && (nY - this['startY'] <= -50)) {
-        setTimeout(swipers.sectionBody.slideNext,300);
+        setTimeout(function(){
+          swipers.sectionBody.slideNext();
+        },300);
         $this.data('sideDownTrigger',3);
       }
     }
     //如果是刚到当前页面，并没有滑动当前块
     else if (scrollDir != 'no' && (nY - this['startY'] >= 50)){
-      setTimeout(swipers.sectionBody.slidePrev,300);
+      setTimeout(function(){
+        swipers.sectionBody.slidePrev();
+      },300);
     }
   })
 

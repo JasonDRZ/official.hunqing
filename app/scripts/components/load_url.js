@@ -31,24 +31,21 @@ define(['jquery','page/swipers','part/history_state','part/in_page','part/frames
     //如果不存在则下一步
     if (!!!pageAr) {loadHash(false); return;};
     var type = pageAr[0],
-      href = pageAr[1];
+      href = decodeURIComponent(pageAr[1]);
     switch (type){
       case link_type.pv_video:{
         event.preventDefault();
         framesWork.pv_video_frame(href);
-        historyState.pushSearchPage(type,href);
         break;
       }
       case link_type.pv_picture:{
         event.preventDefault();
         framesWork.pv_picture_frame(href);
-        historyState.pushSearchPage(type,href);
         break;
       }
       case link_type.news_content:{
         event.preventDefault();
         framesWork.news_frame(href);
-        historyState.pushSearchPage(type,href);
       }
     }
     loadHash(true);

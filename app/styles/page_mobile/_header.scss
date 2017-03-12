@@ -58,20 +58,12 @@
       a {
         display: inline-block;
         width: 50%;
-        color: $main_black;
         font-size: 1.2em;
         line-height: 1.3em;
         small {
-          font-weight: 200;
-          color: lighten($main_black, 50%);
           display: block;
           font-size: 0.8em;
           font-family: serif;
-        }
-        &.active {
-          small {
-            border-top: 1px solid lighten($main_black, 40%);
-          }
         }
       }
     }
@@ -177,7 +169,6 @@
         &.active,
         &:hover{
           a{
-            font-weight: 700;
             color: darken($main_black,30%);
           }
         }
@@ -197,8 +188,7 @@
           display: inline-block;
           height: 30px;
           width: 30px;
-          @include bg_Manual(130%);
-          opacity: 0.6;
+          @include bg_Manual(100%,no-repeat,center -29.5px);
         }
         &.wechat a{
           background-image: url("./../images/icon/btn_wechat.png");

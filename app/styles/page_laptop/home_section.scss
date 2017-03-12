@@ -130,6 +130,7 @@
               color: $main_black;
             }
             .pv_sub{
+              height: 17px;
               line-height: 2em;
               font-size: $sub_content-size;
               color: lighten($main_black,30%);
@@ -314,9 +315,6 @@
         .team_member_show{
           width: 100%;
           height: calc(100% - 80px);
-          &>div{
-            height: 100%;
-          }
           figure{
             float: left;
             display: inline-block;
@@ -583,7 +581,7 @@
       .swiper-wrapper{
         .swiper-slide{
           height: 49.5%;
-          @include bg_Manual(100% 100%,no-repeat,center)
+          @include bg_Manual(100% auto,no-repeat,center)
         }
       }
     }

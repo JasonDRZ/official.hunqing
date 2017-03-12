@@ -59,6 +59,7 @@
               @include ellipsis();
             }
             .pv_sub{
+              @include ellipsis();
               margin-bottom: 0;
             }
           }
@@ -191,12 +192,9 @@
       //Idea Box
       .about_idea_box{
         padding: 0;
-        &>article{
+        &>div>article{
+          padding: 15px 0;
           text-indent: 2em;
-          line-height: 2.1em;
-          padding: 10px 5px;
-          font-size: $content_size;
-          color: lighten($main_black,5%);
         }
         .idea_streamer{
           display: none;
@@ -364,7 +362,6 @@
       .swiper-wrapper{
         .swiper-slide{
           height: 33.3%;
-          @include bg_Manual(100% 100%,no-repeat,center)
         }
       }
     }
